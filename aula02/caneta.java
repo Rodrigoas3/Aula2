@@ -2,36 +2,38 @@ package aula02;
 
 public class caneta {
 
-    String modelo;
-    String cor;
+    public String modelo;
+    public String cor;
     float ponta;
-    int carga;
-    boolean tampada;
-    void status(){
-        System.out.println("Modelo" + " " + this.modelo );
-        System.out.println("Uma caneta" + " " + this.cor );
-        System.out.println("Ponta" + " " + this.ponta );
-        System.out.println("carga" + " " + this.carga );
-        System.out.println("está tampada" + " " + this.tampada );
-    }
-    void rabiscar() {
+    protected int carga;
+    protected boolean tampada;
 
-            if(this.tampada == true){
-                System.out.println("ERROR! NÃO POSSO RABISCAR ");
-            }else {
-                System.out.println("Estou Rabiscando");
-            }
-
-
+    public void status() {
+        System.out.println("Modelo" + " " + this.modelo);
+        System.out.println("Uma caneta" + " " + this.cor);
+        System.out.println("Ponta" + " " + this.ponta);
+        System.out.println("carga" + " " + this.carga);
+        System.out.println("está tampada" + " " + this.tampada);
     }
 
-    void destampar() {
+    public void rabiscar() {
 
+        if (this.tampada == true) {
+            System.out.println("ERROR! NÃO POSSO RABISCAR ");
+        } else {
+            System.out.println("Estou Rabiscando");
+        }
+
+
+    }
+
+
+    public void tampar() {
         this.tampada = true;
-
     }
 
-    public void tampada() {
+    protected void destampada() {
         this.tampada = false;
     }
+
 }
